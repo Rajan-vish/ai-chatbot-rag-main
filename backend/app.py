@@ -200,17 +200,23 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# Enable CORS for React frontend (Vite port 5173 / localhost)
+# Enable CORS for React frontend (Vite local dev + Render / Vercel cloud domains)
+frontend_origin = os.getenv("FRONTEND_URL")
+allowed_origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://localhost:5000",
+    "http://127.0.0.1:5000",
+]
+if frontend_origin:
+    allowed_origins.append(frontend_origin.rstrip("/"))
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-        "http://localhost:5000",
-        "http://127.0.0.1:5000",
-    ],
+    allow_origins=allowed_origins,
+    allow_origin_regex=r"https://.*\.onrender\.com|https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
