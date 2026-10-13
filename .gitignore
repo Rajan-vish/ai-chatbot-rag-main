@@ -1,0 +1,48 @@
+# Environment
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Data directories
+chroma_data/
+models/
+temp_uploads/
+*.db
+rag_app.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+faq-rag-mod
+.gemini
+.agent
+ANALYSIS_REPORT.md
+IMPLEMENTATION_PLAN.md
+
+# Node / Frontend
+node_modules/
+dist/
