@@ -4,6 +4,15 @@ let rawUrl = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 if (rawUrl && !rawUrl.startsWith("http://") && !rawUrl.startsWith("https://")) {
   rawUrl = `https://${rawUrl}`;
 }
+try {
+  const parsed = new URL(rawUrl);
+  if (!parsed.hostname.includes(".") && parsed.hostname !== "localhost") {
+    parsed.hostname += ".onrender.com";
+    rawUrl = parsed.toString().replace(/\/$/, "");
+  }
+} catch (e) {
+  // fallback
+}
 const API_BASE_URL = rawUrl;
 
 const api = axios.create({
