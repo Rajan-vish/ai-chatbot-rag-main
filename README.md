@@ -2,12 +2,16 @@
 
 A production-grade Retrieval-Augmented Generation (RAG) single-page application that lets you upload PDFs and ask questions about them in natural language — with text **and** voice. Features a **React 19 + Vite SPA**, **sub-5ms Redis query caching**, interactive **Citation Inspector**, full **JWT Bearer authentication**, persistent conversation threads in **SQLite (`data/rag_app.db`)**, and an **MLOps observability dashboard** tracking latency, tokens, and real-time financial API costs.
 
-[![CI/CD Pipeline](https://github.com/Rajan-vish/ai-chatbot-rag-main/actions/workflows/ci.yml/badge.svg)](https://github.com/Rajan-vish/ai-chatbot-rag-main/actions/workflows/ci.yml)
+[![Live Demo](https://img.shields.io/badge/Demo-Live%20on%20Render-46E3B7?style=for-the-badge&logo=render&logoColor=black)](https://ai-rag-chatbot-frontend-v5sv.onrender.com)
+[![API Docs](https://img.shields.io/badge/API-Swagger%20Docs-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://ai-rag-chatbot-backend-v5sv.onrender.com/docs)
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.121.3-009688.svg)](https://fastapi.tiangolo.com)
 [![React 19](https://img.shields.io/badge/React-19.3.0-61DAFB.svg)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-8.3.4-646CFF.svg)](https://vitejs.dev/)
 [![Redis](https://img.shields.io/badge/Redis-Upstash%20Cloud-red.svg)](https://upstash.com/)
+
+🌐 **Live Application:** [https://ai-rag-chatbot-frontend-v5sv.onrender.com](https://ai-rag-chatbot-frontend-v5sv.onrender.com)  
+📖 **API Documentation:** [https://ai-rag-chatbot-backend-v5sv.onrender.com/docs](https://ai-rag-chatbot-backend-v5sv.onrender.com/docs)
 
 ---
 
